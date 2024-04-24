@@ -1,0 +1,19 @@
+.about {
+  color: white;
+}
+
+.headH1 {
+  width: 400px;
+  color: white;
+  background-color: var(--boxBackground);
+
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 0px;
+  border-bottom: 2px solid var(--greenElement);
+}
+.headH1 p {
+  margin: 10px;
+  font-size: 1.3rem;
+}
