@@ -11,7 +11,7 @@ const SwitchIt = () => {
 
   const Switched = async () => {
     try {
-      const response = await axiosPrivate.get("/switchit");
+      const response = await axiosPrivate.post("/switch");
       const switchState = response?.data;
       dispatch(addSwitch(switchState));
       localStorage.setItem("toggleState", JSON.stringify(switchState));
