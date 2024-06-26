@@ -28,15 +28,6 @@ export const Employees = [
     img: A3,
   },
   {
-    name: "Gokul S",
-    regNo: "A4",
-    position: "Mechanical Student",
-    github: "",
-    instagram: "https://www.instagram.com/_gokul_45_/",
-    linkedin: "https://www.linkedin.com/in/gokul-s-286b01244/",
-    img: A4,
-  },
-  {
     name: "Giri Prasanth V",
     regNo: "A5",
     position: "ECE Student",
@@ -44,6 +35,15 @@ export const Employees = [
     instagram: "https://www.instagram.com/_.giri_prasanth._/",
     linkedin: "https://www.linkedin.com/in/giri-prasanth-v/",
     img: A5,
+  },
+  {
+    name: "Gokul S",
+    regNo: "A4",
+    position: "Mechanical Student",
+    github: "",
+    instagram: "https://www.instagram.com/_gokul_45_/",
+    linkedin: "https://www.linkedin.com/in/gokul-s-286b01244/",
+    img: A4,
   },
   {
     name: "Praveenraj R S",

@@ -1,11 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import io from "socket.io-client";
 import {
   addUser,
   addAccessToken,
   addPersist,
   addSwitch,
+  addSensorData,
 } from "../features/user/userData";
 
 import Icon from "../icons/hexfuseIcon";
@@ -52,12 +54,29 @@ const LoginForm = () => {
         }
       );
       const accessToken = response?.data?.accessToken;
+      const sensorData = response?.data?.sensorData;
       const switchState = response?.data?.switchState;
       console.log(switchState);
       dispatch(addUser(user));
       dispatch(addAccessToken({ accessToken }));
+      dispatch(addSensorData(sensorData));
       dispatch(addSwitch(switchState));
+
       localStorage.setItem("toggleState", switchState);
+
+      const socket = io("http://localhost:3500", {
+        auth: { accessToken },
+      });
+
+      socket.on("connect", () => {
+        console.log("Connected to WebSocket server");
+      });
+
+      socket.on("sensorData", (data) => {
+        console.log("data:", data);
+        dispatch(addSensorData(data));
+      });
+
       setUser("");
       setPwd("");
       navigate(from, { replace: true });

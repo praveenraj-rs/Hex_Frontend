@@ -13,27 +13,27 @@ code {
     monospace;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 5px;
-}
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: transparent;
-}
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: #a3a3a3;
   border-radius: 100px;
-}
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: #86efac;
-}
+} */
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   margin-top: 10px;
   margin-bottom: 10px;
-}
+} */

@@ -5,6 +5,7 @@ const initialState = {
   accessToken: undefined,
   persist: localStorage.getItem("persist") === "true",
   switchState: localStorage.getItem("toggleState") === "true",
+  sensorData: undefined,
 };
 
 export const userSlice = createSlice({
@@ -23,10 +24,13 @@ export const userSlice = createSlice({
     addSwitch: (state, action) => {
       state.switchState = action.payload;
     },
+    addSensorData: (state, action) => {
+      state.sensorData = action.payload;
+    },
   },
 });
 
-export const { addUser, addAccessToken, addPersist, addSwitch } =
+export const { addUser, addAccessToken, addPersist, addSwitch, addSensorData } =
   userSlice.actions;
 
 export default userSlice.reducer;

@@ -27,57 +27,55 @@ const NavBar = () => {
         </Link>
       </div>
 
-      <div>
-        <ul className="links">
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/hextk">HexTK</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/members"}>Members</NavLink>
-          </li>
+      <div className="navlinks">
+        <NavLink className="navlink" to="/">
+          Home
+        </NavLink>
+        <NavLink className="navlink" to="/hextk">
+          HexTK
+        </NavLink>
+        <NavLink className="navlink" to={"/members"}>
+          Members
+        </NavLink>
+      </div>
 
-          <li>
-            {accessToken ? (
-              <NavLink
-                className="loginBtn"
-                style={() => ({
-                  color: "black",
-                  backgroundColor: "var(--pTextColor)",
-                  borderColor: "transparent",
-                })}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = "#DC6C6C";
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = "var(--pTextColor)";
-                }}
-                onClick={signOut}
-              >
-                Logout
-              </NavLink>
-            ) : (
-              <NavLink
-                className="loginBtn"
-                style={() => ({
-                  color: "black",
-                  backgroundColor: "var(--greenElement)",
-                })}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = "#6CDA80";
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = "var(--greenElement)";
-                }}
-                to={"/login"}
-              >
-                Login
-              </NavLink>
-            )}
-          </li>
-        </ul>
+      <div>
+        {accessToken ? (
+          <NavLink
+            className="loginBtn"
+            style={() => ({
+              color: "black",
+              backgroundColor: "var(--pTextColor)",
+              borderColor: "transparent",
+            })}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = "#DC6C6C";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = "var(--pTextColor)";
+            }}
+            onClick={signOut}
+          >
+            Logout
+          </NavLink>
+        ) : (
+          <NavLink
+            className="loginBtn"
+            style={() => ({
+              color: "black",
+              backgroundColor: "var(--greenElement)",
+            })}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = "#6CDA80";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = "var(--greenElement)";
+            }}
+            to={"/login"}
+          >
+            Login
+          </NavLink>
+        )}
       </div>
     </nav>
   );
