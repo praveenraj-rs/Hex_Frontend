@@ -21,11 +21,32 @@ function App() {
   const dispatch = useDispatch();
   const accessToken = useSelector((state) => state.user.accessToken);
 
+  // useEffect(() => {
+  //   const socket = io("http://localhost:3500");
+  //   if (accessToken) {
+  //     socket.auth = { accessToken };
+  //     socket.connect();
+
+  //     socket.on("sensorData", (data) => {
+  //       console.log("data:", data);
+  //       dispatch(addSensorData(data));
+  //     });
+
+  //     return () => {
+  //       socket.disconnect();
+  //     };
+  //   }
+  // }, [accessToken]);
+
   useEffect(() => {
-    const socket = io("http://localhost:3500");
     if (accessToken) {
-      socket.auth = { accessToken };
-      socket.connect();
+      const socket = io("http://localhost:3500", {
+        auth: { accessToken },
+      });
+
+      socket.on("connect", () => {
+        console.log("Connected to WebSocket server");
+      });
 
       socket.on("sensorData", (data) => {
         console.log("data:", data);
@@ -36,7 +57,7 @@ function App() {
         socket.disconnect();
       };
     }
-  }, [accessToken]);
+  }, [accessToken, dispatch]);
 
   return (
     <>
