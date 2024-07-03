@@ -4,14 +4,29 @@ import Icon from "../icons/hexfuseIcon";
 import SocialMedia from "../components/socialMedia";
 import "./home.css";
 import NavBar from "../components/navBar";
+import { easeIn } from "framer-motion";
+import IconBg from "../ui/icon_bg";
+import HexfuseData from "../data/informations";
 const Home = () => {
+  console.log(HexfuseData.HexfuseData.about);
   return (
     <>
       <NavBar />
       <div className="about">
-        <div className="borderBox">
+        <div className="borderBox1">
           <br />
-          <Icon width="320px" height="160px" />
+          <Icon
+            animate={{
+              opacity: [0, 1],
+              scale: [0.7, 1],
+              transition: {
+                duration: 0.5,
+                transform: easeIn,
+              },
+            }}
+            width="320px"
+            height="160px"
+          />
           <h1>HexFuse</h1>
           <p>A team that work on automation.</p>
           <br />
@@ -23,17 +38,22 @@ const Home = () => {
             />
           </div>
         </div>
-
-        <div className="hexTK">
-          <h1>HexTK</h1>
-          <p>
-            We are working on simple and easy to use web UI
-            <br /> to seamlessly link ESP network modules <br />
-            wirelessly through the HTTP protocol.
-          </p>
-          <NavLink className="navLinkBtn" to={"/hextk"}>
-            HexTK
-          </NavLink>
+      </div>
+      <div className="aboutHexfuse">
+        <h1>About</h1>
+        <p>{HexfuseData.HexfuseData.about}</p>
+      </div>
+      <div className="projects">
+        <div>
+          <div className="hexTK">
+            <div>
+              <h1>HexTK</h1>
+              <p>{HexfuseData.HexfuseData.hextk}</p>
+              <NavLink className="navLinkBtn" to={"/hextk"}>
+                HexTK
+              </NavLink>
+            </div>
+          </div>
         </div>
       </div>
     </>

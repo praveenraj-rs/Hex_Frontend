@@ -39,7 +39,29 @@ const NavBar = () => {
         </NavLink>
       </div>
 
-      <div>
+      <div className="inup">
+        <NavLink
+          className="loginBtn signup"
+          to={"/signup"}
+          style={() =>
+            !accessToken
+              ? {
+                  color: "black",
+                  backgroundColor: "var(--greenElement)",
+                }
+              : {
+                  visibility: "hidden",
+                }
+          }
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = "#6CDA80";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = "var(--greenElement)";
+          }}
+        >
+          SignUp
+        </NavLink>
         {accessToken ? (
           <NavLink
             className="loginBtn"
@@ -62,14 +84,15 @@ const NavBar = () => {
           <NavLink
             className="loginBtn"
             style={() => ({
-              color: "black",
-              backgroundColor: "var(--greenElement)",
+              color: "white",
+              border: "0px",
+              transition: "all 0.2s ease",
             })}
             onMouseEnter={(e) => {
-              e.target.style.backgroundColor = "#6CDA80";
+              e.target.style.color = "var(--pTextColor)";
             }}
             onMouseLeave={(e) => {
-              e.target.style.backgroundColor = "var(--greenElement)";
+              e.target.style.color = "var(--pTextColor)";
             }}
             to={"/login"}
           >

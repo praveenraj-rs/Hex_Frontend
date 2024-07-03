@@ -7,7 +7,7 @@
 
 nav {
   padding: 0px 10px 0 10px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
   display: flex;
   flex-direction: row;
@@ -16,6 +16,7 @@ nav {
 
   color: var(--pTextColor);
   background-color: var(--navBackground);
+
   position: sticky;
   top: 0;
   z-index: 1;
@@ -96,8 +97,18 @@ a.active {
   text-align: center;
 }
 
+.inup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 @media screen and (max-width: 600px) {
   .brandIcon h1 {
+    display: none;
+  }
+  .signup {
     display: none;
   }
 }

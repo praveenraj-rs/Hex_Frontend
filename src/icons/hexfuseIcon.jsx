@@ -1,11 +1,13 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Icon = (props) => {
-  const { width, height } = props;
+  const { width, height, animate } = props;
   return (
     <NavLink to="/">
-      <svg
+      <motion.svg
+        animate={animate}
         width={width ? width : "50px"}
         height={height ? height : "50px"}
         xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +49,7 @@ const Icon = (props) => {
             ></path>
           </g>
         </g>
-      </svg>
+      </motion.svg>
     </NavLink>
   );
 };
