@@ -15,7 +15,7 @@ import {
   Missing,
   HexTK,
 } from "./pages";
-import { addSensorData } from "./features/user/userData";
+import { addSensorData, addSensorValues } from "./features/user/userData";
 
 function App() {
   const dispatch = useDispatch();
@@ -51,6 +51,12 @@ function App() {
       socket.on("sensorData", (data) => {
         console.log("data:", data);
         dispatch(addSensorData(data));
+      });
+
+      socket.on("sensorValues", (data) => {
+        console.log("data:", data);
+        console.log(FormData);
+        dispatch(addSensorValues(data));
       });
 
       return () => {

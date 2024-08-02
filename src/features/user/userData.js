@@ -6,6 +6,7 @@ const initialState = {
   persist: localStorage.getItem("persist") === "true",
   switchState: localStorage.getItem("toggleState") === "true",
   sensorData: undefined,
+  sensorValues: undefined,
 };
 
 export const userSlice = createSlice({
@@ -27,10 +28,19 @@ export const userSlice = createSlice({
     addSensorData: (state, action) => {
       state.sensorData = action.payload;
     },
+    addSensorValues: (state, action) => {
+      state.sensorValues = action.payload;
+    },
   },
 });
 
-export const { addUser, addAccessToken, addPersist, addSwitch, addSensorData } =
-  userSlice.actions;
+export const {
+  addUser,
+  addAccessToken,
+  addPersist,
+  addSwitch,
+  addSensorData,
+  addSensorValues,
+} = userSlice.actions;
 
 export default userSlice.reducer;

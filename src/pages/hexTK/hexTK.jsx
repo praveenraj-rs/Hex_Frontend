@@ -3,6 +3,7 @@ import NavBar from "../../components/navBar";
 import SwitchIt from "./switchIt";
 import ToggleButton from "../../components/toggleButton";
 import { useSelector } from "react-redux";
+import LineGraph from "../../components/lineGraph";
 const HexTK = () => {
   const switchState = useSelector((state) => state.user.switchState);
   const sensorData = useSelector((state) => state.user.sensorData);
@@ -15,31 +16,22 @@ const HexTK = () => {
       <NavBar />
       <div className="hexTK">
         <h1>HexTK</h1>
-        <p>Simplify the ESP connection.</p>
-        <ToggleButton
+        <p>Hydroponics Sensor Readings</p>
+        <LineGraph />
+        {/* <ToggleButton
           label="Bulb"
           clickHandle={Switching}
           checking={switchState}
-        ></ToggleButton>
-        <div
-          style={{
-            padding: "10px",
-            backgroundColor: "gray",
-            borderRadius: "10px",
-          }}
-        >
-          <div style={{ color: "white" }}>PH: {sensorData?.ph}</div>
-          <div style={{ color: "white" }}>
+        ></ToggleButton> */}
+        <div className="hydroReading">
+          {/* <div className="reading">PH: {sensorData?.ph}</div> */}
+          {/* <div className="reading">
             Atmospheric Temperature: {sensorData?.atmtemp}
-          </div>
-          <div style={{ color: "white" }}>
-            Water Temperature: {sensorData?.wtemp}
-          </div>
-          <div style={{ color: "white" }}>
-            Electon Conductivity: {sensorData?.ec}
-          </div>
-          <div style={{ color: "white" }}>TDS: {sensorData?.tds}</div>
-          <div style={{ color: "white" }}>Humidity: {sensorData?.humidity}</div>
+          </div> */}
+          <div className="reading">Water Temperature: {sensorData?.wtemp}</div>
+          {/* <div className="reading">Electon Conductivity: {sensorData?.ec}</div> */}
+          <div className="reading">TDS: {sensorData?.tds}</div>
+          <div className="reading">Humidity: {sensorData?.humidity}</div>
         </div>
       </div>
     </>
