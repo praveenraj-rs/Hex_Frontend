@@ -1,31 +1,37 @@
-import "./hexTK.css";
-import useAxiosPrivate from "../../hooks/useAxiosPrivate";
+import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { addSwitch } from "../../features/user/userData";
 
-const SwitchIt = () => {
+const useSwitchIt = () => {
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const Switched = async () => {
-    try {
-      const response = await axiosPrivate.post("/switch");
-      const switchState = response?.data;
-      dispatch(addSwitch(switchState));
-      localStorage.setItem("toggleState", JSON.stringify(switchState));
-      console.log(switchState);
-    } catch (error) {
-      console.error("Error fetching users:", error);
-      if (error.response && error.response.status === 403) {
-        console.log("Redirecting to login page...");
-        navigate("/login"); // Replace '/login' with your actual login page path
+  const setSwitchState = useCallback(
+    async (switchID) => {
+      try {
+        const response = await axiosPrivate.post("/setswitchstate", {
+          switchID,
+        });
+        const switchState = response?.data;
+        dispatch(addSwitch(switchState));
+        localStorage.setItem(`toggleState`, JSON.stringify(switchState));
+        console.log(switchState);
+      } catch (error) {
+        console.error("Error fetching users:", error);
+        if (error.response && error.response.status === 403) {
+          console.log("Redirecting to login page...");
+          navigate("/login"); // Replace '/login' with your actual login page path
+        }
       }
-    }
-  };
+    },
+    [axiosPrivate, dispatch, navigate, 1]
+  );
 
-  return Switched;
+  return setSwitchState;
 };
 
-export default SwitchIt;
+export default useSwitchIt;

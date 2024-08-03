@@ -14,6 +14,7 @@
   padding: 20px;
   background-color: var(--toggleBackground);
   border-radius: 10px;
+  margin: 20px;
 }
 .container p {
   text-align: center;

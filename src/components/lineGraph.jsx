@@ -12,45 +12,45 @@ import {
 
 const data = [
   {
-    name: "Page A",
-    temp: 4000,
-    pv: 2400,
+    name: "7:00",
+    temp: 32,
+    atmtemp: 33.3,
     amt: 2400,
   },
   {
-    name: "Page B",
-    temp: 3000,
-    pv: 1398,
+    name: "7:10",
+    temp: 33,
+    atmtemp: 34,
     amt: 2210,
   },
   {
-    name: "Page C",
-    temp: 2000,
-    pv: 9800,
+    name: "7:20",
+    temp: 36,
+    atmtemp: 32,
     amt: 2290,
   },
   {
-    name: "Page D",
-    temp: 2780,
-    pv: 3908,
+    name: "7:30",
+    temp: 35,
+    atmtemp: 34.5,
     amt: 2000,
   },
   {
-    name: "Page E",
-    temp: 1890,
-    pv: 4800,
+    name: "7:40",
+    temp: 35,
+    atmtemp: 36,
     amt: 2181,
   },
   {
-    name: "Page F",
-    temp: 2390,
-    pv: 3800,
+    name: "7:50",
+    temp: 34,
+    atmtemp: 38,
     amt: 2500,
   },
   {
-    name: "Page G",
-    temp: 3490,
-    pv: 4300,
+    name: "8:00",
+    temp: 32,
+    atmtemp: 34,
     amt: 2100,
   },
 ];
@@ -75,7 +75,7 @@ const LineGraph = () => {
       <Legend />
       <Line
         type="monotone"
-        dataKey="pv"
+        dataKey="atmtemp"
         stroke="#8884d8"
         activeDot={{ r: 8 }}
       />

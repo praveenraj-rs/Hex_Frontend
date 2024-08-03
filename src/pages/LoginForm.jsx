@@ -55,7 +55,7 @@ const LoginForm = () => {
       );
       const accessToken = response?.data?.accessToken;
       const sensorData = response?.data?.sensorData;
-      const switchState = response?.data?.switchState;
+      const switchState = response?.data?.switchStates;
       console.log(switchState);
       dispatch(addUser(user));
       dispatch(addAccessToken({ accessToken }));

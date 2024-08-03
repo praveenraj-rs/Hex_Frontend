@@ -1,6 +1,11 @@
 import axios from "../api/axios";
 import { useSelector, useDispatch } from "react-redux";
-import { addUser, addAccessToken, addPersist } from "../features/user/userData";
+import {
+  addUser,
+  addAccessToken,
+  addPersist,
+  addSwitch,
+} from "../features/user/userData";
 
 const useRefreshToken = () => {
   const dispatch = useDispatch();
@@ -10,6 +15,7 @@ const useRefreshToken = () => {
       withCredentials: true,
     });
     dispatch(addAccessToken(response.data.accessToken));
+    dispatch(addSwitch(response.data.switchStates));
     return response.data.accessToken;
   };
   return refresh;
