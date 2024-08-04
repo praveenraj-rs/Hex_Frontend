@@ -4,7 +4,7 @@ const initialState = {
   user: undefined,
   accessToken: undefined,
   persist: localStorage.getItem("persist") === "true",
-  switchState: localStorage.getItem("toggleState"),
+  switchState: `${localStorage.getItem("toggleState")}`,
   sensorData: undefined,
   sensorValues: undefined,
 };

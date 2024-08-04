@@ -4,11 +4,12 @@ import ToggleButton from "../../components/toggleButton";
 import { useSelector } from "react-redux";
 import LineGraph from "../../components/lineGraph";
 import useSwitchIt from "./switchIt";
-
 const HexTK = () => {
   const switchState = useSelector((state) => state.user.switchState);
   const sensorData = useSelector((state) => state.user.sensorData);
   const setSwitchState = useSwitchIt();
+
+  console.log(switchState);
 
   const handleSwitch = (switchID) => {
     setSwitchState(switchID);
@@ -18,7 +19,7 @@ const HexTK = () => {
     <>
       <NavBar />
       <div className="hexTK">
-        <h1>HexTK</h1>
+        <h1>Autonomous Hydroponics System</h1>
 
         {/* Sensor Readings */}
         <div className="sensorValues">
