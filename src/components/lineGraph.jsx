@@ -18,38 +18,38 @@ const data = [
     amt: 2400,
   },
   {
-    name: "7:10",
+    name: "7:30",
     temp: 33,
     atmtemp: 34,
     amt: 2210,
   },
   {
-    name: "7:20",
-    temp: 36,
-    atmtemp: 32,
+    name: "8:00",
+    temp: 33,
+    atmtemp: 36,
     amt: 2290,
   },
   {
-    name: "7:30",
-    temp: 35,
+    name: "8:30",
+    temp: 31,
     atmtemp: 34.5,
     amt: 2000,
   },
   {
-    name: "7:40",
-    temp: 35,
+    name: "9:00",
+    temp: 32,
     atmtemp: 36,
     amt: 2181,
   },
   {
-    name: "7:50",
-    temp: 34,
+    name: "9:30",
+    temp: 30,
     atmtemp: 38,
     amt: 2500,
   },
   {
-    name: "8:00",
-    temp: 32,
+    name: "10:00",
+    temp: 28,
     atmtemp: 34,
     amt: 2100,
   },
@@ -70,7 +70,16 @@ const LineGraph = () => {
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
-      <YAxis />
+      <YAxis
+        label={{
+          value: `Temperature °C`,
+
+          style: { textAnchor: "middle" },
+          angle: -90,
+          position: "left",
+          offset: 0,
+        }}
+      />
       <Tooltip />
       <Legend />
       <Line

@@ -48,7 +48,8 @@ const Home = () => {
           <div className="hexTK">
             <div>
               <h1>HexTK</h1>
-              <p>{HexfuseData.HexfuseData.hextk}</p>
+              {/* <p>{HexfuseData.HexfuseData.hextk}</p> */}
+              <p>Integrated IoT System for Comprehensive Dashboard Control</p>
               <NavLink className="navLinkBtn" to={"/hextk"}>
                 HexTK
               </NavLink>
