@@ -1,0 +1,52 @@
+.missing {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--backgroundColor);
+  color: white;
+}
+
+.borderBox {
+  padding: 25px;
+
+  margin: 20px;
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--boxBackground);
+  transition: border-color 1s;
+}
+
+.missing h1 {
+  font-size: 3rem;
+  margin: 1px;
+}
+
+.missing p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--pTextColor);
+  margin-bottom: 5px;
+}
+
+.box2 {
+  width: 300px;
+  height: 3rem;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0 solid white;
+  border-radius: 10px;
+  background-color: var(--boxBackground);
+}

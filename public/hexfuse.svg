@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="96"
+   height="96"
+   viewBox="0 0 12.7 12.7"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+  <sodipodi:namedview/>
+<g id="layer1">
+<g id="g48" transform="matrix(5.0204666,0,0,5.0204666,-3.7065766,-2.9904503)">
+  <path
+         style="fill:none;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
+         d="M 1.6746879,1.3709323 2.3563287,2.3275242 1.2986214,2.3214275 0.98975822,1.8687402 1.3616029,1.3957251 1.9837321,2.333338"
+         id="leftHex"
+         sodipodi:nodetypes="cccccc" />
+  <path
+         style="fill:none;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
+         d="M 1.6916688,1.37959 2.7352067,1.3874518 3.0440699,1.8401391 2.6722251,2.3131542 2.050096,1.3755413"
+         id="rightHex"
+         sodipodi:nodetypes="ccccc" />
+</g>
+
+  <path
+       style="fill-opacity:1;stroke-width:0.0502047;stroke-dasharray:none;stroke-opacity:1"
+       d="M 4.7951846,3.7091163 4.2484764,3.6926993 4.8207233,4.4537499 5.2211306,4.2262324 Z"
+       id="centerJoint"
+       sodipodi:nodetypes="ccccc" />
+</g>
+
+<style>
+#leftHex{
+  stroke:white;
+}
+#centerJoint{
+  fill:white;
+  stroke:white;
+}
+#rightHex{
+  stroke:#00ff4d;
+}
+</style>
+
+</svg>

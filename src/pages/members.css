@@ -1,0 +1,82 @@
+nav {
+  margin-bottom: 20px;
+}
+.members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.member {
+  width: 250px;
+  margin: 10px;
+  padding: 20px;
+
+  color: white;
+  background-color: var(--textBackground);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 5px solid var(--textBackground);
+  border-radius: 10px;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.member img {
+  width: 130px;
+  height: 130px;
+
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.member h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.member p {
+  margin-bottom: 20px;
+  color: var(--pTextColor);
+}
+
+.member:hover {
+  border-bottom-color: var(--greenElement);
+  transform: scale(1.01);
+}
+
+.social {
+  transition: all 0.3s ease-in-out;
+}
+
+.headH1 {
+  width: 400px;
+  color: white;
+  background-color: var(--boxBackground);
+
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 0px;
+  border-bottom: 2px solid var(--greenElement);
+}
+.headH1 h2 {
+  margin: 10px;
+}
+.memberComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+
+  margin: 0 100px 50px 100px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--boxBackground);
+}

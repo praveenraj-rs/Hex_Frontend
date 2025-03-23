@@ -1,0 +1,45 @@
+.gasMonitor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--boxBackground);
+}
+.gasMonitor p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--pTextColor);
+  margin-top: 0;
+}
+
+.sensorValues {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  background-color: var(--backgroundColor);
+  width: 100%;
+
+  border-radius: 15px;
+}
+
+.sensor_label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: var(--boxBackground);
+  margin: 20px;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.sensor_value {
+  font-size: 32px;
+  font-weight: bolder;
+  margin: 20px;
+}

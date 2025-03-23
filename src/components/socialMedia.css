@@ -1,0 +1,26 @@
+:root {
+  --socialIcon: #a3a3a3;
+}
+
+.SocialMedia {
+  display: flex;
+  gap: 15px;
+}
+
+.SocialMedia svg {
+  fill: var(--socialIcon);
+  stroke: var(--socialIcon);
+  transition: all 0.3s ease;
+}
+.SocialMedia a {
+  transition: all 0.2s ease;
+}
+
+.SocialMedia a:hover {
+  transform: scale(1.1); /* Scale on hover */
+}
+
+.SocialMedia a:hover svg {
+  fill: #71ff9c; /* Change the fill color on hover */
+  stroke: none;
+}

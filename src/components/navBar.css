@@ -1,0 +1,107 @@
+nav {
+  padding: 0px 10px 0 10px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--pTextColor);
+  background-color: var(--navBackground);
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.brandIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brandIcon h1 {
+  padding-left: 10px;
+  color: white;
+  margin: 10px;
+  font-size: 24px;
+}
+.brandIcon a {
+  text-decoration: none;
+}
+
+/* .links {
+  display: flex;
+}
+
+.links li {
+  list-style: none;
+}
+.links li:nth-child(4) {
+  padding-right: 5px;
+  margin-right: 5px;
+}
+
+.links li a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  color: var(--pTextColor);
+  text-decoration: none;
+}
+
+.links li a:hover {
+  color: white;
+}
+
+.links li a.active {
+  color: white;
+} */
+
+.navlinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navlink {
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  color: var(--pTextColor);
+  transition: all 0.15s ease-in-out;
+}
+
+.navlink:hover {
+  color: white;
+}
+
+a.active {
+  color: white;
+}
+
+.loginBtn {
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.inup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .brandIcon h1 {
+    display: none;
+  }
+  .signup {
+    display: none;
+  }
+}
