@@ -137,7 +137,7 @@ const LoginForm = () => {
               id="username"
               ref={userRef}
               autoComplete="off"
-              onChange={(e) => setUser(e.target.value)}
+              onChange={(e) => setUser(e.target.value.trim())}
               value={user}
               required
             />
@@ -145,7 +145,7 @@ const LoginForm = () => {
             <input
               type="password"
               id="passwd"
-              onChange={(e) => setPwd(e.target.value)}
+              onChange={(e) => setPwd(e.target.value.trim())}
               value={pwd}
               required
             />{" "}

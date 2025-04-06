@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { addSwitch } from "../../features/user/userData";
 
@@ -8,11 +8,13 @@ const useSwitchIt = () => {
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const username = useSelector((state)=>state.user.user);
 
   const setSwitchState = useCallback(
     async (switchID) => {
       try {
         const response = await axiosPrivate.post("/setswitchstate", {
+	  username,
           switchID,
         });
         const switchState = response?.data;
